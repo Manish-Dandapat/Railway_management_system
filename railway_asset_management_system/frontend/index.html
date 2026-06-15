@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Asset Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>USERS</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Assets</li>
+            <li>Employees</li>
+            <li>Maintenance</li>
+            <li>Reports</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <header>
+            <h1>Railway Asset Management Dashboard</h1>
+        </header>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Assets</h3>
+                <p id="totalAssets">120</p>
+            </div>
+
+            <div class="card">
+                <h3>Assigned Assets</h3>
+                <p>75</p>
+            </div>
+
+            <div class="card">
+                <h3>Under Maintenance</h3>
+                <p>12</p>
+            </div>
+
+            <div class="card">
+                <h3>Available Assets</h3>
+                <p>33</p>
+            </div>
+        </div>
+
+        <section class="asset-form">
+            <h2>Add Asset</h2>
+
+            <form id="assetForm">
+                <input type="text" id="assetName" placeholder="Asset Name" required>
+                <input type="text" id="serialNo" placeholder="Serial Number" required>
+
+                <select id="status">
+                    <option>Available</option>
+                    <option>In Use</option>
+                    <option>Under Repair</option>
+                </select>
+
+                <button type="submit">Add Asset</button>
+            </form>
+        </section>
+
+        <section class="asset-list">
+            <h2>Asset List</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asset Name</th>
+                        <th>Serial No</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="assetTable">
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
